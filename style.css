@@ -1138,3 +1138,105 @@ body {
         text-align: center;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================
+   MOBILE HERO CARDS FIX (Screen se bahar nahi jayenge)
+   ======================== */
+@media (max-width: 991px) {
+
+    /* 1. Container ko set kiya taake cards center mein ayen */
+    .hero-visual {
+        height: auto;          /* Height auto taake content k hisaab se barhay */
+        min-height: 400px;
+        display: flex;         /* Flexbox on */
+        flex-direction: column;/* Upar se neeche */
+        justify-content: center;
+        align-items: center;
+        padding: 20px;         /* Padding taake kinaron se chipke na */
+        overflow: hidden;      /* Agar koi cheez bahar jaye to cut jaye */
+        margin-top: 30px;
+    }
+
+    /* 2. Blobs ko peeche fix kiya */
+    .blob-cont {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%; /* Thora phaila hua taake background bhara lage */
+        height: 100%;
+        z-index: 0;
+    }
+
+    /* 3. Cards Reset (Sab se zaroori hissa) */
+    .glass-card {
+        position: relative; /* Absolute khatam, ab ye normal box hain */
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        
+        width: 100%;
+        max-width: 320px; /* Card ki maximum chorai fix ki */
+        margin: 10px 0;   /* Cards k darmiyan gap */
+        z-index: 2;
+        
+        /* Mobile pe animation rok do taake hile na */
+        animation: none; 
+    }
+
+    /* 4. Zig-Zag Design (Staircase Style) for Mobile */
+    .card-1 {
+        align-self: flex-end; /* Right side par chipkay ga */
+        margin-right: 10px;
+    }
+
+    .card-2 {
+        align-self: center;   /* Center mein */
+    }
+
+    .card-3 {
+        align-self: flex-start; /* Left side par chipkay ga */
+        margin-left: 10px;
+    }
+}
