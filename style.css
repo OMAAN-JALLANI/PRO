@@ -660,3 +660,441 @@ body {
         font-size: 1rem;
     }
 }
+
+
+/* ========================
+   7.CEOOOOOOOOOOOOOO
+   ======================== */
+
+   /* ========================
+   LEADERSHIP TEAM SECTION
+   ======================== */
+.team-section {
+    padding: 80px 0;
+    background-color: #ffffff; /* Clean White BG */
+}
+
+/* --- MEMBER CARD --- */
+.team-member {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    /* Halka sa shadow taake box alag dikhe, lekin image pe effect nahi */
+    border-radius: 20px; 
+    transition: transform 0.3s ease;
+}
+
+/* Mobile pe spacing k liye */
+@media (max-width: 768px) {
+    .team-member {
+        margin-bottom: 30px;
+    }
+}
+
+/* --- IMAGE STYLING (NO FILTERS) --- */
+.img-wrapper {
+    width: 100%;
+    /* Image container ki height fix kar di taake layout na toote */
+    height: 400px; 
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image crop ho kar fit hogi, pichkegi nahi */
+    display: block;
+    /* No hover effects/filters here as requested */
+}
+
+/* --- TEXT INFO --- */
+.member-info .name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.member-info .role {
+    font-size: 1rem;
+    color: var(--primary); /* Green Color for Designation */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* --- SOCIAL ICONS --- */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Round Icons */
+    background-color: #f4f4f4; /* Light Grey BG */
+    color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Hover Colors (Sirf icons pe color aye ga) */
+.icon-btn:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+.instagram:hover { background: #E1306C; }
+.facebook:hover { background: #1877F2; }
+.youtube:hover { background: #FF0000; }
+.tiktok:hover { background: #000000; }
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .img-wrapper {
+        height: 350px; /* Mobile pe thori choti height */
+    }
+    
+    .member-info .name {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================
+   8. moving logoooooo
+
+   ======================== */
+   /* ========================
+   CLIENTS LOGO SLIDER
+   ======================== */
+.clients-section {
+    padding: 50px 0;
+    background: white; /* Pure White Background */
+    overflow: hidden; /* Scrollbar na aye */
+}
+
+/* Slider Container */
+.slider {
+    height: 100px; /* Slider ki height */
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Side Fade Effect (Premium Look) */
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 150px; /* Fade ki chorai */
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+/* Track (Jisme logos hain) */
+.slide-track {
+    animation: scroll 20s linear infinite; /* 20s speed hai, kam/ziada kar sakte ho */
+    display: flex;
+    width: calc(250px * 10); /* 250px (Slide width) x Total Slides */
+}
+
+/* Individual Slide */
+.slide {
+    height: 100px;
+    width: 250px; /* Har logo ke liye area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px; /* Logo k beech gap */
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 80px;  
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.slider:hover .slide-track {
+    animation-play-state: paused; /* Mouse le jane par ruk jaye */
+}
+
+.slide img:hover { 
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Ye value adjust karni parti hai total width k hisaab se */
+        /* Agar 4 logos hain aur humne duplicate kiye hain, to -1000px theek rahega */
+        transform: translateX(calc(-250px * 4)); 
+    }
+}
+
+/* ========================
+   footerrrrrrr
+   ======================== */
+   /* ========================
+   FOOTER SECTION
+   ======================== */
+.pro-footer {
+    background-color: var(--secondary); /* Dark Green Background */
+    color: white;
+    padding-top: 70px;
+    width: 100%;
+    overflow: hidden; /* Side scroll rokne k liye */
+    position: relative;
+    border-top: 5px solid var(--accent); /* Gold Top Border */
+}
+
+/* Container to handle padding but allow full width BG */
+.footer-container {
+    width: 100%;
+    padding: 0 5%; /* 5% side padding taake content chipke na */
+    max-width: 1400px; /* Content bohot ziada na phaile */
+    margin: 0 auto;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+/* --- COLUMNS --- */
+.footer-col {
+    flex: 1;
+    min-width: 250px; /* Kam se kam itni chorai ho */
+}
+
+/* Logo & Text */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    height: 50px;
+    background: white; /* Agar logo transparent hai to white box de dia */
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Headings */
+.footer-col h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--accent); /* Gold Heading */
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background: white;
+}
+
+/* --- LINKS LIST --- */
+.links-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-col li { margin-bottom: 12px; }
+
+.links-col a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.links-col a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+/* --- CONTACT LIST --- */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.contact-list i {
+    color: var(--accent);
+    margin-top: 5px;
+}
+
+.contact-list a { color: white; text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+
+/* --- SOCIAL ICONS --- */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer-socials a:hover {
+    background: var(--accent);
+    color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+/* --- CIRCULAR MAP (THE SPECIAL FEATURE) --- */
+.map-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Right align on desktop */
+}
+
+.map-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--accent); /* Gold Border */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    position: relative;
+    background: #000;
+}
+
+.map-circle iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(20%); /* Thora sa dark map taake professional lage */
+}
+
+/* --- BOTTOM BAR --- */
+.footer-bottom {
+    background: #022001; /* Even Darker Green */
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.powered-by a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ========================
+   MOBILE RESPONSIVE
+   ======================== */
+@media (max-width: 991px) {
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo { justify-content: center; }
+    .footer-socials { justify-content: center; }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%); /* Line center */
+    }
+
+    .contact-list li {
+        justify-content: center;
+    }
+
+    /* Map ko center karna mobile pe */
+    .map-col {
+        align-items: center;
+    }
+
+    .map-circle {
+        width: 200px; /* Thora bara mobile pe taake touch easy ho */
+        height: 200px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
