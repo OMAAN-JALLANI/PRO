@@ -165,7 +165,48 @@
     <div class="gallery-btn-container mt-5"  style="margin-bottom: 7px;">
         <a href="./Components/Gallary.html" class="view-gallery-btn">View All Events <i class="fa-solid fa-arrow-right"></i></a>
     </div>
+<!--------------------------------------->
+ <section class="simple-video-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="video-wrapper">
+                    <video autoplay muted loop  controls class="simple-video">
+                        <source src="./Images/vd.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
 
+            <div class="col-lg-6 ps-lg-5">
+                <div class="text-content">
+                    <span class="section-subtitle"> </span>
+                    <h2 class="section-title">Journey to Recovery</h2>
+                    <p class="section-desc text-start mx-0">
+                        At Pakistan Recovery Oasis, we don't just treat symptoms; we rebuild lives. Our holistic approach ensures that every individual finds their path back to a healthy, happy, and productive life.
+                    </p>
+
+                    <div class="features-list mt-4 mb-4">
+                        <div class="f-item">
+                            <i class="fa-solid fa-circle-check"></i> 24/7 Medical Monitoring
+                        </div>
+                        <div class="f-item">
+                            <i class="fa-solid fa-circle-check"></i> Expert Psychologists
+                        </div>
+                        <div class="f-item">
+                            <i class="fa-solid fa-circle-check"></i> Family Support Sessions
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--------------------------------------->
     <section class="achievements-section" id="achievements">
     <div class="container">
         
@@ -253,10 +294,7 @@
     </div>
 </section>
 
-<!--logooooooooo moving-->
-<!-- =========================
-     6. CLIENTS LOGO SLIDER
-     ========================= -->
+<!--logooooooooo moving--> 
 <section class="clients-section" id="clients">
     <div class="container text-center mb-4">
         <span class="section-subtitle">Our Trusted Partners</span>
@@ -264,8 +302,7 @@
 
     <div class="slider">
         <div class="slide-track">
-            
-            <!-- ORIGINAL 4 LOGOS -->
+             
             <div class="slide">
                 <img src="./Images/leads.png" alt="Client 1">
             </div>
@@ -278,9 +315,7 @@
             <div class="slide">
                 <img src="./Images/uol.png" alt="Client 4">
             </div>
-
-            <!-- DUPLICATE LOGOS (Loop ke liye zaroori hain) -->
-            <!-- Same upar walay images yahan dubara lagayen -->
+ 
             <div class="slide">
                  <img src="./Images/leads.png" alt="Client 1">
             </div>
@@ -293,8 +328,7 @@
             <div class="slide">
                 <img src="./Images/uol.png" alt="Client 4">
             </div>
-
-            <!-- SAFETY DUPLICATE (Agar screen bari ho) -->
+ 
             <div class="slide">
                 <img src="./Images/leads.png" alt="Client 1">
             </div>
@@ -383,10 +417,9 @@
         <p class="powered-by">Powered by <a href="https://omaan-jallani.github.io/coded-clouds/">CODEDCLOUDS</a></p>
     </div>
 </footer>
-<script>
-    // Counter Animation Logic
+<script> 
     let valueDisplays = document.querySelectorAll(".num");
-    let interval = 2000; // Total time for animation (2 seconds)
+    let interval = 2000; //  2 sec
 
     let observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -397,7 +430,7 @@
                 let duration = Math.floor(interval / endValue);
                 
                 let counter = setInterval(function () {
-                    startValue += 5; // Speed up by counting in chunks
+                    startValue += 5;   
                     if(startValue > endValue) startValue = endValue;
                     
                     valueDisplay.textContent = startValue;
@@ -405,12 +438,11 @@
                         clearInterval(counter);
                     }
                 }, duration);
-                
-                // Stop observing after animation runs once
+                 
                 observer.unobserve(entry.target); 
             }
         });
-    }, { threshold: 0.5 }); // Trigger when 50% visible
+    }, { threshold: 0.5 });  
 
     valueDisplays.forEach((valueDisplay) => {
         observer.observe(valueDisplay);

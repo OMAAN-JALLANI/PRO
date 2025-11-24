@@ -1,20 +1,14 @@
-/* ========================
-   1. GLOBAL STYLES
-   ======================== */
+ 
 :root {
-    /* Logo wala Main Green */
+   
     --primary: #0a870e;    
-    
-    /* Dark Green (Hover ke liye) */
+     
     --secondary: #043102;  
-    
-    /* Gold/Yellow (Highlight/Accent ke liye - Suraj ki kiran) */
+     
     --accent: #f9a825;     
-    
-    /* Text Color (Logo ka 'Pakistan Recovery' wala Grey - Green nahi!) */
+     
     --dark: #2d2d2d;       
-    
-    /* Background (Halka sa Mint White) */
+     
     --light: #f4f9f4;      
     
     --font: 'Poppins', sans-serif;
@@ -25,41 +19,33 @@ body {
     overflow-x: hidden;
 }
 
-/* ========================
-   2. NAVBAR
-   
-   ======================== */
-   /* ========================
-   WHATSAPP FLOAT ICON
-   ======================== */
+ 
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;  /* Neeche se gap */
-    right: 30px;   /* Right se gap */
+    bottom: 30px;   
+    right: 30px;    
     width: 60px;
     height: 60px;
-    background-color: #25d366; /* Official WhatsApp Green */
+    background-color: #25d366;  
     color: white;
     border-radius: 50%;
     text-align: center;
     font-size: 32px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    z-index: 9999; /* Sab se upar rahay */
+    z-index: 9999; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
-/* Hover Effect (Zoom & Darker Green) */
+ 
 .whatsapp-float:hover {
     background-color: #128c7e;
-    transform: scale(1.1); /* Thora bara hoga */
+    transform: scale(1.1);  
     color: white;
 }
-
-/* Mobile Responsive (Thora chota taake beech mein na aye) */
+ 
 @media (max-width: 768px) {
     .whatsapp-float {
         width: 50px;
@@ -69,9 +55,7 @@ body {
         font-size: 28px;
     }
 }
-   /* ========================
-   LOGO IMAGE STYLING
-   ======================== */
+    
 
 .logo-wrapper {
     display: flex;
@@ -80,16 +64,15 @@ body {
 }
 
 .logo-img {
-    height: 30px; /* Desktop par size */
-    width: auto;  /* Width khud adjust hogi */
+    height: 30px;  
+    width: auto;   
     object-fit: contain;
     transition: 0.3s;
 }
-
-/* Mobile Responsive Size */
+ 
 @media (max-width: 991px) {
     .logo-img {
-        height: 25px; /* Mobile par thora chota */
+        height: 25px;  
     }
 }
 .custom-navbar {
@@ -140,42 +123,35 @@ body {
     transform: translateY(-2px);
 }
 
-/* ========================
-   3. HERO SECTION (CSS ART)
-   ======================== *//* ========================
-   HERO SECTION (2-COLUMN ROTATION LAYOUT)
-   ======================== */
+ 
 .hero-section {
-    padding-top: 120px; /* Navbar gap */
+    padding-top: 120px;  
     padding-bottom: 60px;
-    overflow: hidden; /* Scrollbar na aye */
+    overflow: hidden;  
     background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    min-height: 100vh; /* Full screen height */
+    min-height: 100vh;  
     display: flex;
     align-items: center;
 }
-
-/* --- LEFT SIDE: TEXT --- */
+ 
 .hero-text {
-    z-index: 2; /* Content upar rahay */
+    z-index: 2;  
 }
-
-/* Tagline (Bara aur Bold) */
+ 
 .tagline {
-    color: var(--primary); /* Green */
-    font-weight: 800;      /* Extra Bold */
+    color: var(--primary);  
+    font-weight: 800;       
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 1.3rem;     /* Size Bara kiya */
+    font-size: 1.3rem;     
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
 }
-
-/* Heading (Size Chota) */
+ 
 .hero-text h1 {
-    font-size: 2.8rem; /* Pehle 3.8 tha, ab chota kiya */
+    font-size: 2.8rem;  
     font-weight: 800;
     color: var(--dark);
     line-height: 1.2;
@@ -199,18 +175,16 @@ body {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 35px;
-    max-width: 550px; /* Text bohot lamba na ho */
+    max-width: 550px;  
     line-height: 1.6;
 }
-
-/* Buttons (No Changes) */
+ 
 .hero-btns { display: flex; gap: 15px; margin-bottom: 40px; }
 .btn-primary-hero { background: var(--primary); color: white; border: none; padding: 15px 35px; border-radius: 50px; font-weight: 600; transition: 0.3s; }
 .btn-secondary-hero { background: transparent; color: var(--primary); border: 2px solid var(--primary); padding: 15px 35px; border-radius: 50px; font-weight: 600; transition: 0.3s; }
 .btn-primary-hero:hover { background: var(--secondary); transform: translateY(-3px); }
 .btn-secondary-hero:hover { background: var(--primary); color: white; }
-
-/* --- RIGHT SIDE: ROTATION SYSTEM --- */
+ 
 .hero-visual {
     height: 500px;
     display: flex;
@@ -218,35 +192,32 @@ body {
     align-items: center;
     position: relative;
 }
-
-/* 1. Watermark Background */
+ 
 .watermark-bg {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    opacity: 0.08; /* Halka sa nazar aye */
+    opacity: 0.08;  
     pointer-events: none;
 }
 
 .watermark-bg img {
-    width: 450px; /* Bara logo */
+    width: 450px;  
     height: auto;
     filter: grayscale(100%);
 }
-
-/* 2. Orbit Container */
+ 
 .orbit-container {
     position: relative;
-    width: 420px; /* Circle Size */
+    width: 420px;  
     height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
 }
-
-/* Center Hub */
+ 
 .center-hub {
     position: absolute;
     width: 90px;
@@ -262,8 +233,7 @@ body {
     z-index: 5;
     border: 6px solid white;
 }
-
-/* 3. Rotating Track */
+ 
 .orbit-track {
     position: absolute;
     width: 100%;
@@ -272,26 +242,22 @@ body {
     border: 2px dashed rgba(10, 135, 14, 0.3); /* Dotted Line */
     animation: rotateCircle 25s linear infinite; /* Slow Rotation */
 }
-
-/* 4. Orbit Items (Points) */
+ 
 .orbit-item {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 120px;
-    /* Counter Rotate taake text seedha rahay */
+    width: 120px; 
     animation: counterRotate 25s linear infinite; 
 }
-
-/* Positions (Clock) */
+ 
 .item-1 { top: -25px; left: 50%; transform: translateX(-50%); } 
 .item-2 { top: 50%; right: -25px; transform: translateY(-50%); } 
 .item-3 { bottom: -25px; left: 50%; transform: translateX(-50%); } 
 .item-4 { top: 50%; left: -25px; transform: translateY(-50%); } 
-
-/* Icon Circle */
+ 
 .icon-circle {
     width: 60px;
     height: 60px;
@@ -307,8 +273,7 @@ body {
     margin-bottom: 8px;
     transition: 0.3s;
 }
-
-/* Text inside bubbles */
+ 
 .orbit-item span {
     font-size: 13px;
     font-weight: 700;
@@ -319,53 +284,43 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     border: 1px solid #eee;
 }
-
-/* Hover Effects */
+ 
 .orbit-container:hover .orbit-track,
 .orbit-container:hover .orbit-item {
-    animation-play-state: paused; /* Ruk jaye */
+    animation-play-state: paused;  
 }
 
 .orbit-item:hover .icon-circle {
-    background: var(--accent); /* Gold */
+    background: var(--accent);  
     color: white;
     transform: scale(1.1);
 }
-
-/* Animations */
+ 
 @keyframes rotateCircle { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes counterRotate { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
 
-/* ========================
-   MOBILE RESPONSIVE
-   ======================== */
-   /* ========================
-   MOBILE BUTTONS FIX (Smaller & Stacked)
-   ======================== */
+ 
 @media (max-width: 991px) {
-    
-    /* Container ko set kiya */
+     
     .hero-btns {
-        flex-direction: column; /* Buttons upar neeche ayen */
-        gap: 10px;              /* Beech mein thora gap */
+        flex-direction: column;  
+        gap: 10px;               
         width: 100%;
-        max-width: 280px;       /* Ziada choray na hon */
-        margin: 0 auto 30px;    /* Center mein rahen */
+        max-width: 280px;       
+        margin: 0 auto 30px;    
     }
-
-    /* Buttons ka size control */
+ 
     .btn-primary-hero, 
     .btn-secondary-hero {
-        padding: 10px 20px;     /* Padding adhi kar di */
-        font-size: 14px;        /* Text chota kiya */
-        width: 100%;            /* Button barabar size k honge */
+        padding: 10px 20px;      
+        font-size: 14px;         
+        width: 100%;             
         display: flex;
-        justify-content: center; /* Text center */
+        justify-content: center;  
         align-items: center;
-        height: 45px;           /* Fixed height taake neat lagen */
+        height: 45px;           
     }
-    
-    /* Link tag jo button k bahar hai usay bhi full width karna zaroori hai */
+     
     .hero-btns a {
         width: 100%;
         text-decoration: none;
@@ -383,15 +338,13 @@ body {
     .hero-text h1 { font-size: 2.2rem; }
     .tagline { justify-content: center; font-size: 1.1rem; }
     .hero-btns { justify-content: center; }
-
-    /* Visual Adjustment */
+ 
     .hero-visual {
-        height: 400px; /* Height kam ki */
+        height: 400px;  
         width: 100%;
         margin-top: 40px;
     }
-
-    /* Circle Size Reduce for Mobile */
+ 
     .orbit-container {
         width: 300px;
         height: 300px;
@@ -402,39 +355,34 @@ body {
     .icon-circle { width: 45px; height: 45px; font-size: 18px; }
     .orbit-item span { font-size: 11px; max-width: 90px; }
 }
-
-/* --- GRID SYSTEM (Fixed Alignment) --- */
+ 
 .events-grid {
-    display: grid;
-    /* Desktop: 4 Cards barabar */
+    display: grid; 
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     width: 100%;
 }
-
-/* --- CARD STYLING --- */
+ 
 .event-card {
     position: relative;
     height: 350px;
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
-    background: #000; /* Fallback */
-    /* Zaroori: Taake hero section wala "top/left" yahan na aye */
+    background: #000;   
     top: auto !important; 
     left: auto !important;
     right: auto !important;
     margin: 0 !important;
-    transform: none; /* Reset transform */
+    transform: none; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .event-card:hover {
-    transform: translateY(-5px); /* Sirf hover pe hile */
+    transform: translateY(-5px);  
     box-shadow: 0 15px 30px rgba(10, 135, 14, 0.2);
 }
-
-/* Background Images (Class names changed to avoid conflict) */
+ 
 .event-bg {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -443,7 +391,7 @@ body {
     transition: transform 0.6s ease;
 }
 
-/* Updated Class Names */
+ 
 .event-box-1 .event-bg { background-image: url('./Images/agremnt.jpg'); }
 .event-box-2 .event-bg { background-image: url('./Images/kds.jpg'); }
 .event-box-3 .event-bg { background-image: url('./Images/UMT2.jpg'); }
@@ -452,8 +400,7 @@ body {
 .event-card:hover .event-bg {
     transform: scale(1.1);
 }
-
-/* Gradient Overlay */
+ 
 .event-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -461,7 +408,7 @@ body {
     z-index: 1;
 }
 
-/* Content */
+ 
 .event-content {
     position: absolute;
     bottom: 20px;
@@ -469,7 +416,7 @@ body {
     right: 20px;
     z-index: 2;
     color: white;
-    text-align: left; /* Text hamesha left rahe */
+    text-align: left;  
 }
 
 .event-date {
@@ -499,7 +446,7 @@ body {
     font-weight: 300;
 }
 
-/* Button */
+
 .gallery-btn-container { text-align: center; }
 .view-gallery-btn {
     display: inline-block;
@@ -515,19 +462,15 @@ body {
     font-size: 14px;
 }
 .view-gallery-btn:hover { background: var(--primary); color: white; }
-
-/* ========================
-   MOBILE RESPONSIVE (Perfect Grid)
-   ======================== */
+ 
 @media (max-width: 991px) {
-    .events-grid {
-        /* Tablet/Mobile: 2 Cards Upar, 2 Neeche */
+    .events-grid { 
         grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
     }
 
     .event-card {
-        height: 240px; /* Mobile height adjusted */
+        height: 240px; 
     }
 
     .section-title {
@@ -536,44 +479,36 @@ body {
 }
 
 @media (max-width: 480px) {
-    .events-grid {
-        /* Choti screen pe bhi 2 hi rakhna taake grid maintain rahe */
+    .events-grid { 
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
     .event-content h4 { font-size: 0.9rem; }
-    .event-content p { display: none; } /* Sirf heading dikhao choti screen pe */
+    .event-content p { display: none; }  
 }
 
 
 
 
 
-
-
-/* ========================
-   ACHIEVEMENTS SECTION (Circular)
-   ======================== */
+ 
 .achievements-section {
-    padding: 80px 0;
-    /* Dark Green Background for contrast */
+    padding: 80px 0; 
     background: linear-gradient(135deg, var(--secondary) 0%, #022001 100%);
     color: white;
     position: relative;
     overflow: hidden;
 }
-
-/* Subtitle Adjust for Dark BG */
+ 
 .achievements-section .section-subtitle {
-    color: var(--accent); /* Gold color */
+    color: var(--accent); 
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 14px;
 }
-
-/* --- CIRCULAR COUNTER --- */
+ 
 .circular-counter {
     display: flex;
     flex-direction: column;
@@ -581,8 +516,7 @@ body {
     justify-content: center;
     position: relative;
 }
-
-/* The Circle Wrapper */
+ 
 .circular-counter .circle {
     position: relative;
     width: 180px;
@@ -593,20 +527,17 @@ body {
     align-items: center;
     margin-bottom: 20px;
 }
-
-/* The Glowing Ring (CSS Art) */
+ 
 .circular-counter .circle::before {
     content: '';
     position: absolute;
     width: 180px;
     height: 180px;
-    border-radius: 50%;
-    /* Gradient Ring: Gold to Transparent */
+    border-radius: 50%; 
     border: 5px solid rgba(255, 255, 255, 0.1);
     border-top-color: var(--accent);
     border-right-color: var(--primary);
-    border-bottom-color: var(--accent);
-    /* Rotate Animation */
+    border-bottom-color: var(--accent); 
     animation: spinRing 2s linear infinite; 
     box-shadow: 0 0 20px rgba(10, 135, 14, 0.5);
 }
@@ -615,13 +546,12 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
-/* Inner Circle (To make it hollow) */
+ 
 .circular-counter .box {
     position: relative;
     width: 150px;
     height: 150px;
-    background: var(--secondary); /* Matches Section BG */
+    background: var(--secondary);  
     border-radius: 50%;
     text-align: center;
     display: flex;
@@ -630,8 +560,7 @@ body {
     box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
     z-index: 2;
 }
-
-/* Number Styling */
+ 
 .circular-counter .num {
     color: #fff;
     font-size: 40px;
@@ -639,13 +568,12 @@ body {
 }
 
 .circular-counter .plus {
-    color: var(--accent); /* Gold Plus Sign */
+    color: var(--accent);  
     font-size: 30px;
     font-weight: 800;
     margin-left: 2px;
 }
-
-/* Label Text Below */
+ 
 .counter-text {
     font-size: 1.2rem;
     font-weight: 600;
@@ -653,10 +581,7 @@ body {
     color: #e0e0e0;
     letter-spacing: 1px;
 }
-
-/* ========================
-   MOBILE RESPONSIVE
-   ======================== */
+ 
 @media (max-width: 768px) {
     .achievements-section {
         padding: 50px 0;
@@ -689,41 +614,28 @@ body {
         font-size: 1rem;
     }
 }
-
-
-/* ========================
-   7.CEOOOOOOOOOOOOOO
-   ======================== */
-
-   /* ========================
-   LEADERSHIP TEAM SECTION
-   ======================== */
+ 
 .team-section {
     padding: 80px 0;
-    background-color: #ffffff; /* Clean White BG */
+    background-color: #ffffff;  
 }
-
-/* --- MEMBER CARD --- */
+ 
 .team-member {
     text-align: center;
     padding: 20px;
-    background: #fff;
-    /* Halka sa shadow taake box alag dikhe, lekin image pe effect nahi */
+    background: #fff; 
     border-radius: 20px; 
     transition: transform 0.3s ease;
 }
-
-/* Mobile pe spacing k liye */
+ 
 @media (max-width: 768px) {
     .team-member {
         margin-bottom: 30px;
     }
 }
-
-/* --- IMAGE STYLING (NO FILTERS) --- */
+ 
 .img-wrapper {
-    width: 100%;
-    /* Image container ki height fix kar di taake layout na toote */
+    width: 100%; 
     height: 500px; 
     overflow: hidden;
     border-radius: 15px;
@@ -733,12 +645,10 @@ body {
 .member-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Image crop ho kar fit hogi, pichkegi nahi */
-    display: block;
-    /* No hover effects/filters here as requested */
+    object-fit: cover;  
+    display: block; 
 }
-
-/* --- TEXT INFO --- */
+ 
 .member-info .name {
     font-size: 1.8rem;
     font-weight: 700;
@@ -748,7 +658,7 @@ body {
 
 .member-info .role {
     font-size: 1rem;
-    color: var(--primary); /* Green Color for Designation */
+    color: var(--primary);  
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -766,8 +676,8 @@ body {
 .icon-btn {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Round Icons */
-    background-color: #f4f4f4; /* Light Grey BG */
+    border-radius: 50%;  
+    background-color: #f4f4f4;  
     color: var(--dark);
     display: flex;
     justify-content: center;
@@ -776,8 +686,7 @@ body {
     text-decoration: none;
     transition: 0.3s ease;
 }
-
-/* Hover Colors (Sirf icons pe color aye ga) */
+ 
 .icon-btn:hover {
     color: white;
     transform: translateY(-3px);
@@ -787,48 +696,38 @@ body {
 .facebook:hover { background: #1877F2; }
 .youtube:hover { background: #FF0000; }
 .tiktok:hover { background: #000000; }
-
-/* --- MOBILE RESPONSIVE --- */
+ 
 @media (max-width: 768px) {
     .img-wrapper {
-        height: 350px; /* Mobile pe thori choti height */
+        height: 350px;  
     }
     
     .member-info .name {
         font-size: 1.5rem;
     }
 }
-
-/* ========================
-   8. moving logoooooo
-
-   ======================== */
-   /* ========================
-   CLIENTS LOGO SLIDER
-   ======================== */
+ 
 .clients-section {
     padding: 50px 0;
-    background: white; /* Pure White Background */
-    overflow: hidden; /* Scrollbar na aye */
+    background: white;  
+    overflow: hidden; 
 }
-
-/* Slider Container */
+ 
 .slider {
-    height: 100px; /* Slider ki height */
+    height: 100px;  
     margin: auto;
     overflow: hidden;
     position: relative;
     width: 100%;
 }
-
-/* Side Fade Effect (Premium Look) */
+ 
 .slider::before,
 .slider::after {
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
     height: 100px;
     position: absolute;
-    width: 150px; /* Fade ki chorai */
+    width: 150px; 
     z-index: 2;
 }
 
@@ -842,22 +741,20 @@ body {
     top: 0;
     transform: rotateZ(180deg);
 }
-
-/* Track (Jisme logos hain) */
+ 
 .slide-track {
-    animation: scroll 20s linear infinite; /* 20s speed hai, kam/ziada kar sakte ho */
+    animation: scroll 20s linear infinite;  
     display: flex;
-    width: calc(250px * 10); /* 250px (Slide width) x Total Slides */
+    width: calc(250px * 10); 
 }
-
-/* Individual Slide */
+ 
 .slide {
     height: 100px;
-    width: 250px; /* Har logo ke liye area */
+    width: 250px;  
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 30px; /* Logo k beech gap */
+    padding: 0 30px; 
 }
 
 .slide img {
@@ -866,50 +763,42 @@ body {
     opacity: 0.6;
     transition: 0.3s;
 }
-
-/* Hover Effect */
+ 
 .slider:hover .slide-track {
-    animation-play-state: paused; /* Mouse le jane par ruk jaye */
+    animation-play-state: paused; 
 }
 
 .slide img:hover { 
     opacity: 1;
     transform: scale(1.1);
 }
-
-/* --- ANIMATION KEYFRAMES --- */
+ 
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
-    100% {
-        /* Ye value adjust karni parti hai total width k hisaab se */
-        /* Agar 4 logos hain aur humne duplicate kiye hain, to -1000px theek rahega */
+    100% {  
         transform: translateX(calc(-250px * 4)); 
     }
 }
 
 /* ========================
    footerrrrrrr
-   ======================== */
-   /* ========================
-   FOOTER SECTION
-   ======================== */
+   ======================== */ 
 .pro-footer {
-    background-color: var(--secondary); /* Dark Green Background */
+    background-color: var(--secondary); 
     color: white;
     padding-top: 70px;
     width: 100%;
-    overflow: hidden; /* Side scroll rokne k liye */
+    overflow: hidden;  
     position: relative;
-    border-top: 5px solid var(--accent); /* Gold Top Border */
+    border-top: 5px solid var(--accent);  
 }
-
-/* Container to handle padding but allow full width BG */
+ 
 .footer-container {
     width: 100%;
-    padding: 0 5%; /* 5% side padding taake content chipke na */
-    max-width: 1400px; /* Content bohot ziada na phaile */
+    padding: 0 5%;  
+    max-width: 1400px;  
     margin: 0 auto;
 }
 
@@ -920,14 +809,12 @@ body {
     gap: 40px;
     padding-bottom: 50px;
 }
-
-/* --- COLUMNS --- */
+ 
 .footer-col {
     flex: 1;
-    min-width: 250px; /* Kam se kam itni chorai ho */
+    min-width: 250px;  
 }
-
-/* Logo & Text */
+ 
 .footer-logo {
     display: flex;
     align-items: center;
@@ -941,7 +828,7 @@ body {
 
 .footer-logo-img {
     height: 50px;
-    background: white; /* Agar logo transparent hai to white box de dia */
+    background: white;  
     padding: 5px;
     border-radius: 8px;
 }
@@ -952,13 +839,12 @@ body {
     color: #e0e0e0;
     margin-bottom: 20px;
 }
-
-/* Headings */
+ 
 .footer-col h4 {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 25px;
-    color: var(--accent); /* Gold Heading */
+    color: var(--accent);  
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -973,8 +859,7 @@ body {
     height: 3px;
     background: white;
 }
-
-/* --- LINKS LIST --- */
+ 
 .links-col ul {
     list-style: none;
     padding: 0;
@@ -994,8 +879,7 @@ body {
     color: var(--accent);
     padding-left: 5px;
 }
-
-/* --- CONTACT LIST --- */
+ 
 .contact-list {
     list-style: none;
     padding: 0;
@@ -1015,8 +899,7 @@ body {
 
 .contact-list a { color: white; text-decoration: none; }
 .contact-list a:hover { text-decoration: underline; }
-
-/* --- SOCIAL ICONS --- */
+ 
 .footer-socials {
     display: flex;
     gap: 15px;
@@ -1040,12 +923,10 @@ body {
     color: var(--secondary);
     transform: translateY(-3px);
 }
-
-/* --- CIRCULAR MAP (THE SPECIAL FEATURE) --- */
+ 
 .map-col {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Right align on desktop */
+    flex-direction: column; 
 }
 
 .map-circle {
@@ -1053,7 +934,7 @@ body {
     height: 180px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid var(--accent); /* Gold Border */
+    border: 5px solid var(--accent);  
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     position: relative;
     background: #000;
@@ -1063,12 +944,11 @@ body {
     width: 100%;
     height: 100%;
     border: 0;
-    filter: grayscale(20%); /* Thora sa dark map taake professional lage */
+    filter: grayscale(20%); 
 }
-
-/* --- BOTTOM BAR --- */
+ 
 .footer-bottom {
-    background: #022001; /* Even Darker Green */
+    background: #022001;  
     padding: 20px 5%;
     display: flex;
     justify-content: space-between;
@@ -1087,11 +967,7 @@ body {
     color: var(--accent);
     font-weight: 700;
     text-decoration: none;
-}
-
-/* ========================
-   MOBILE RESPONSIVE
-   ======================== */
+} 
 @media (max-width: 991px) {
     .footer-row {
         flex-direction: column;
@@ -1103,20 +979,19 @@ body {
 
     .footer-col h4::after {
         left: 50%;
-        transform: translateX(-50%); /* Line center */
+        transform: translateX(-50%);  
     }
 
     .contact-list li {
         justify-content: center;
     }
-
-    /* Map ko center karna mobile pe */
+  
     .map-col {
         align-items: center;
     }
 
     .map-circle {
-        width: 200px; /* Thora bara mobile pe taake touch easy ho */
+        width: 200px;    
         height: 200px;
     }
 
@@ -1165,66 +1040,149 @@ body {
 
 
 
-
-
-/* ========================
-   MOBILE HERO CARDS FIX (Screen se bahar nahi jayenge)
-   ======================== */
+ 
 @media (max-width: 991px) {
-
-    /* 1. Container ko set kiya taake cards center mein ayen */
+ 
     .hero-visual {
-        height: auto;          /* Height auto taake content k hisaab se barhay */
+        height: auto;           
         min-height: 400px;
-        display: flex;         /* Flexbox on */
-        flex-direction: column;/* Upar se neeche */
+        display: flex;          
+        flex-direction: column; 
         justify-content: center;
         align-items: center;
-        padding: 20px;         /* Padding taake kinaron se chipke na */
-        overflow: hidden;      /* Agar koi cheez bahar jaye to cut jaye */
+        padding: 20px;          
+        overflow: hidden;      
         margin-top: 30px;
     }
-
-    /* 2. Blobs ko peeche fix kiya */
+ 
     .blob-cont {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 120%; /* Thora phaila hua taake background bhara lage */
+        width: 120%;  
         height: 100%;
         z-index: 0;
     }
-
-    /* 3. Cards Reset (Sab se zaroori hissa) */
+ 
     .glass-card {
-        position: relative; /* Absolute khatam, ab ye normal box hain */
+        position: relative;  
         top: auto !important;
         left: auto !important;
         right: auto !important;
         bottom: auto !important;
         
         width: 100%;
-        max-width: 320px; /* Card ki maximum chorai fix ki */
-        margin: 10px 0;   /* Cards k darmiyan gap */
+        max-width: 320px;  
+        margin: 10px 0;   
         z-index: 2;
-        
-        /* Mobile pe animation rok do taake hile na */
+         
         animation: none; 
     }
-
-    /* 4. Zig-Zag Design (Staircase Style) for Mobile */
+ 
     .card-1 {
-        align-self: flex-end; /* Right side par chipkay ga */
+        align-self: flex-end;  
         margin-right: 10px;
     }
 
     .card-2 {
-        align-self: center;   /* Center mein */
+        align-self: center;   
     }
 
     .card-3 {
-        align-self: flex-start; /* Left side par chipkay ga */
+        align-self: flex-start; 
         margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* ========================
+   SIMPLE VIDEO SECTION
+   ======================== */
+.simple-video-section {
+    padding: 100px 0;
+    background-color: var(--light); /* Cream Background */
+}
+
+/* --- VIDEO STYLING --- */
+.video-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Soft Shadow */
+    border: 5px solid white; /* White Border Frame */
+}
+
+.simple-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* --- TEXT STYLING --- */
+.text-content .section-title {
+    margin-bottom: 20px;
+    text-align: left; /* Text left align */
+}
+
+.text-content .section-subtitle {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Feature List Items */
+.features-list .f-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.features-list i {
+    color: var(--primary); /* Green Icon */
+    font-size: 1.2rem;
+}
+
+/* ========================
+   MOBILE RESPONSIVE
+   ======================== */
+@media (max-width: 991px) {
+    .simple-video-section {
+        padding: 60px 0;
+        text-align: center; /* Mobile pe center text */
+    }
+
+    /* Text alignment reset for mobile center look */
+    .text-content .section-title,
+    .section-desc {
+        text-align: center !important;
+        margin: 0 auto 20px;
+    }
+
+    .features-list {
+        display: inline-block;
+        text-align: left; /* List left hi achi lagti hai */
+    }
+    
+    .ps-lg-5 {
+        padding-left: 0 !important; /* Mobile pe padding khatam */
     }
 }

@@ -15,12 +15,8 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    /* ========================
-   CLIENTS PAGE STYLING (Big Grid)
-   ======================== */
-
-/* --- 1. Header (Gallery Jaisa) --- */
+<style> 
+ 
 .page-header {
     height: 350px;
     width: 100%;
@@ -30,46 +26,42 @@
     justify-content: center;
     text-align: center;
     color: white;
-    margin-top: 80px; /* Navbar gap */
-    
-    /* Background Image Placeholder */
+    margin-top: 80px;  
     background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
 }
 
 .page-header .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(4, 49, 2, 0.8); /* Dark PRO Green Overlay */
+    background: rgba(4, 49, 2, 0.8);  
 }
 
 .page-header .content { position: relative; z-index: 2; }
 .page-header h1 { font-size: 3rem; font-weight: 800; text-transform: uppercase; }
-
-/* --- 2. Big Clients Grid --- */
+ 
 .big-clients-section {
     padding: 80px 0;
-    background-color: var(--light); /* Cream/White BG */
+    background-color: var(--light);  
 }
 
 .big-client-card {
     background: white;
-    padding: 50px 30px; /* Ziada padding taake bara lage */
+    padding: 50px 30px;  
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     text-align: center;
     transition: all 0.4s ease;
     border: 2px solid transparent;
-    height: 100%; /* Taake sab barabar hon */
+    height: 100%;  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
-
-/* --- LOGO SIZE (Bara wala) --- */
+ 
 .logo-wrapper-big {
-    height: 150px; /* Logo area ki height bari kar di */
+    height: 150px;  
     width: 100%;
     display: flex;
     align-items: center;
@@ -77,14 +69,13 @@
 }
 
 .logo-wrapper-big img {
-    max-height: 100%; /* Full height use kare */
-    max-width: 80%;   /* Width container se bahar na jaye */
+    max-height: 100%; 
+    max-width: 80%;    
     width: auto;
     object-fit: contain;
     transition: 0.4s ease;
 }
-
-/* Client Name */
+ 
 .big-client-card h3 {
     font-size: 1.2rem;
     font-weight: 700;
@@ -93,20 +84,17 @@
     text-transform: uppercase;
     margin-top: 15px;
 }
-
-/* --- HOVER EFFECTS (Green Shadow) --- */
+ 
 .big-client-card:hover {
-    transform: translateY(-10px);
-    /* Green Glow Shadow */
+    transform: translateY(-10px); 
     box-shadow: 0 15px 40px rgba(10, 135, 14, 0.25);
-    border-color: var(--primary); /* Green Border */
+    border-color: var(--primary); 
 }
 
 .big-client-card:hover img {
-    transform: scale(1.1); /* Logo thora zoom ho */
+    transform: scale(1.1);  
 }
-
-/* --- MOBILE RESPONSIVE --- */
+ 
 @media (max-width: 768px) {
     .page-header h1 { font-size: 2rem; }
     
@@ -115,46 +103,39 @@
     }
     
     .logo-wrapper-big {
-        height: 100px; /* Mobile pe thora normal size */
+        height: 100px; 
     }
 }
 
 
 /*ffffffffffffffff*/
 
-:root {
-    /* Logo wala Main Green */
-    --primary: #0a870e;    
-    
-    /* Dark Green (Hover ke liye) */
+:root { 
+    --primary: #0a870e;     
     --secondary: #043102;  
-    
-    /* Gold/Yellow (Highlight/Accent ke liye - Suraj ki kiran) */
+     
     --accent: #f9a825;     
-    
-    /* Text Color (Logo ka 'Pakistan Recovery' wala Grey - Green nahi!) */
+     
     --dark: #2d2d2d;       
-    
-    /* Background (Halka sa Mint White) */
+     
     --light: #f4f9f4;      
     
     --font: 'Poppins', sans-serif;
 }
 .pro-footer {
-    background-color: var(--secondary); /* Dark Green Background */
+    background-color: var(--secondary);  
     color: white;
     padding-top: 70px;
     width: 100%;
-    overflow: hidden; /* Side scroll rokne k liye */
+    overflow: hidden; 
     position: relative;
-    border-top: 5px solid var(--accent); /* Gold Top Border */
+    border-top: 5px solid var(--accent);  
 }
-
-/* Container to handle padding but allow full width BG */
+ 
 .footer-container {
     width: 100%;
-    padding: 0 5%; /* 5% side padding taake content chipke na */
-    max-width: 1400px; /* Content bohot ziada na phaile */
+    padding: 0 5%;  
+    max-width: 1400px;  
     margin: 0 auto;
 }
 
