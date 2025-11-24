@@ -80,7 +80,7 @@ body {
 }
 
 .logo-img {
-    height: 60px; /* Desktop par size */
+    height: 30px; /* Desktop par size */
     width: auto;  /* Width khud adjust hogi */
     object-fit: contain;
     transition: 0.3s;
@@ -89,7 +89,7 @@ body {
 /* Mobile Responsive Size */
 @media (max-width: 991px) {
     .logo-img {
-        height: 45px; /* Mobile par thora chota */
+        height: 25px; /* Mobile par thora chota */
     }
 }
 .custom-navbar {
@@ -142,31 +142,40 @@ body {
 
 /* ========================
    3. HERO SECTION (CSS ART)
+   ======================== *//* ========================
+   HERO SECTION (2-COLUMN ROTATION LAYOUT)
    ======================== */
 .hero-section {
-    height: 100vh; /* Full Screen */
-    min-height: 600px;
-    position: relative;
+    padding-top: 120px; /* Navbar gap */
+    padding-bottom: 60px;
+    overflow: hidden; /* Scrollbar na aye */
     background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    padding-top: 80px; /* Navbar space */
+    min-height: 100vh; /* Full screen height */
     display: flex;
     align-items: center;
-    overflow: hidden;
 }
 
-/* Text Styling */
+/* --- LEFT SIDE: TEXT --- */
+.hero-text {
+    z-index: 2; /* Content upar rahay */
+}
+
+/* Tagline (Bara aur Bold) */
 .tagline {
-    color: var(--secondary);
-    font-weight: 700;
-    letter-spacing: 2px;
+    color: var(--primary); /* Green */
+    font-weight: 800;      /* Extra Bold */
+    letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 14px;
-    display: block;
-    margin-bottom: 10px;
+    font-size: 1.3rem;     /* Size Bara kiya */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
+/* Heading (Size Chota) */
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem; /* Pehle 3.8 tha, ab chota kiya */
     font-weight: 800;
     color: var(--dark);
     line-height: 1.2;
@@ -177,241 +186,189 @@ body {
     color: var(--primary);
     position: relative;
     display: inline-block;
-    
 }
 
-/* Underline Effect */
 .highlight::after {
     content: '';
     position: absolute;
-    bottom: 5px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: var(--accent);
-    opacity: 0.3;
-    z-index: -1;
+    bottom: 5px; left: 0; width: 100%; height: 10px;
+    background: var(--accent); opacity: 0.3; z-index: -1;
 }
 
 .hero-text p {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 35px;
-    max-width: 500px;
+    max-width: 550px; /* Text bohot lamba na ho */
+    line-height: 1.6;
 }
 
-/* Buttons */
-.hero-btns {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.btn-primary-hero {
-    
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
-    border-radius: 30px;
-}
-
-.btn-secondary-hero {
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    padding: 15px 35px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
-    border-radius: 30px;
-
-}
-
+/* Buttons (No Changes) */
+.hero-btns { display: flex; gap: 15px; margin-bottom: 40px; }
+.btn-primary-hero { background: var(--primary); color: white; border: none; padding: 15px 35px; border-radius: 50px; font-weight: 600; transition: 0.3s; }
+.btn-secondary-hero { background: transparent; color: var(--primary); border: 2px solid var(--primary); padding: 15px 35px; border-radius: 50px; font-weight: 600; transition: 0.3s; }
 .btn-primary-hero:hover { background: var(--secondary); transform: translateY(-3px); }
 .btn-secondary-hero:hover { background: var(--primary); color: white; }
 
-/* Stats */
-.trust-stats {
-    display: flex;
-    gap: 40px;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-}
-
-.stat-item h3 { font-size: 2rem; font-weight: 800; color: var(--dark); margin: 0; }
-.stat-item p { margin: 0; font-size: 14px; color: #777; }
-
-/* ========================
-   4. ANIMATED VISUALS (The "Mast Kamal")
-   ======================== */
+/* --- RIGHT SIDE: ROTATION SYSTEM --- */
 .hero-visual {
-    height: 100%;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Animated Blobs */
-.blob-cont {
     position: relative;
-    width: 500px;
-    height: 500px;
 }
 
-.blob {
+/* 1. Watermark Background */
+.watermark-bg {
     position: absolute;
-    border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.6;
-    animation: move 10s infinite alternate;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.08; /* Halka sa nazar aye */
+    pointer-events: none;
 }
 
-/* ========================
-   UPDATED NATURE BLOBS
-   ======================== */
-
-.blob-1 { 
-    top: 0; 
-    left: 0; 
-    width: 300px; 
-    height: 300px; 
-    /* Light Mint Green */
-    background: #c8e6c9; 
-    animation-duration: 8s; 
-    opacity: 0.5;
+.watermark-bg img {
+    width: 450px; /* Bara logo */
+    height: auto;
+    filter: grayscale(100%);
 }
 
-.blob-2 { 
-    bottom: 0; 
-    right: 0; 
-    width: 350px; 
-    height: 350px; 
-    /* Thora Dark Mint */
-    background: #a5d6a7; 
-    animation-duration: 12s; 
-    opacity: 0.4;
-}
-
-.blob-3 { 
-    bottom: 50px; 
-    left: 50px; 
-    width: 200px; 
-    height: 200px; 
-    /* Soft Yellow (Sunlight effect) */
-    background: #fff59d; 
-    animation-duration: 10s; 
-    opacity: 0.6;
-}
-@keyframes move {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(20px, -20px) scale(1.1); }
-}
-
-/* Floating Glass Cards */
-.glass-card {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(15px);
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+/* 2. Orbit Container */
+.orbit-container {
+    position: relative;
+    width: 420px; /* Circle Size */
+    height: 420px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
-    border: 1px solid rgba(255,255,255,0.8);
-    animation: float 6s ease-in-out infinite;
+    z-index: 2;
 }
 
-.glass-card i {
-    font-size: 24px;
+/* Center Hub */
+.center-hub {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    box-shadow: 0 0 30px rgba(10, 135, 14, 0.4);
+    z-index: 5;
+    border: 6px solid white;
+}
+
+/* 3. Rotating Track */
+.orbit-track {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dashed rgba(10, 135, 14, 0.3); /* Dotted Line */
+    animation: rotateCircle 25s linear infinite; /* Slow Rotation */
+}
+
+/* 4. Orbit Items (Points) */
+.orbit-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    /* Counter Rotate taake text seedha rahay */
+    animation: counterRotate 25s linear infinite; 
+}
+
+/* Positions (Clock) */
+.item-1 { top: -25px; left: 50%; transform: translateX(-50%); } 
+.item-2 { top: 50%; right: -25px; transform: translateY(-50%); } 
+.item-3 { bottom: -25px; left: 50%; transform: translateX(-50%); } 
+.item-4 { top: 50%; left: -25px; transform: translateY(-50%); } 
+
+/* Icon Circle */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primary);
-    background: #e3f2fd;
-    padding: 12px;
-    border-radius: 10px;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 8px;
+    transition: 0.3s;
 }
 
-.glass-card h5 { margin: 0; font-size: 16px; font-weight: 700; color: var(--dark); }
-
-.card-1 { top: 20%; right: 10%; animation-delay: 0s; }
-.card-2 { bottom: 20%; left: 10%; animation-delay: 3s; }
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+/* Text inside bubbles */
+.orbit-item span {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
 }
+
+/* Hover Effects */
+.orbit-container:hover .orbit-track,
+.orbit-container:hover .orbit-item {
+    animation-play-state: paused; /* Ruk jaye */
+}
+
+.orbit-item:hover .icon-circle {
+    background: var(--accent); /* Gold */
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes rotateCircle { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes counterRotate { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
 
 /* ========================
-   5. MOBILE RESPONSIVE
+   MOBILE RESPONSIVE
    ======================== */
 @media (max-width: 991px) {
     .hero-section {
         height: auto;
         padding-top: 100px;
-        padding-bottom: 50px;
         text-align: center;
     }
 
-    .hero-text h1 { font-size: 2.5rem; }
-    
-    .hero-btns {
-        justify-content: center;
-        flex-direction: column;
-    }
+    .hero-row { flex-direction: column; }
 
-    .trust-stats {
-        justify-content: center;
-    }
+    .hero-text h1 { font-size: 2.2rem; }
+    .tagline { justify-content: center; font-size: 1.1rem; }
+    .hero-btns { justify-content: center; }
 
-    /* Visual Adjustments Mobile */
-    .blob-cont {
+    /* Visual Adjustment */
+    .hero-visual {
+        height: 400px; /* Height kam ki */
         width: 100%;
-        height: 300px;
         margin-top: 40px;
     }
-    
-    .glass-card {
-        position: relative;
-        display: inline-flex;
-        margin: 10px;
-        top: auto; right: auto; left: auto; bottom: auto;
+
+    /* Circle Size Reduce for Mobile */
+    .orbit-container {
+        width: 300px;
+        height: 300px;
     }
-}
-/* ========================
-   6. BUTTON STYLES (HERO SECTION)
-   ======================== */
-   /* ========================
-   EVENTS & CONTRACTS SECTION (FIXED)
-   ======================== */
-.events-section {
-    padding: 80px 0;
-    background-color: #ffffff;
-}
 
-.section-subtitle {
-    color: var(--primary);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--dark);
-    margin-bottom: 10px;
-}
-
-.section-desc {
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 15px;
+    .watermark-bg img { width: 280px; }
+    
+    .icon-circle { width: 45px; height: 45px; font-size: 18px; }
+    .orbit-item span { font-size: 11px; max-width: 90px; }
 }
 
 /* --- GRID SYSTEM (Fixed Alignment) --- */
