@@ -339,13 +339,45 @@ body {
 /* ========================
    MOBILE RESPONSIVE
    ======================== */
+   /* ========================
+   MOBILE BUTTONS FIX (Smaller & Stacked)
+   ======================== */
+@media (max-width: 991px) {
+    
+    /* Container ko set kiya */
+    .hero-btns {
+        flex-direction: column; /* Buttons upar neeche ayen */
+        gap: 10px;              /* Beech mein thora gap */
+        width: 100%;
+        max-width: 280px;       /* Ziada choray na hon */
+        margin: 0 auto 30px;    /* Center mein rahen */
+    }
+
+    /* Buttons ka size control */
+    .btn-primary-hero, 
+    .btn-secondary-hero {
+        padding: 10px 20px;     /* Padding adhi kar di */
+        font-size: 14px;        /* Text chota kiya */
+        width: 100%;            /* Button barabar size k honge */
+        display: flex;
+        justify-content: center; /* Text center */
+        align-items: center;
+        height: 45px;           /* Fixed height taake neat lagen */
+    }
+    
+    /* Link tag jo button k bahar hai usay bhi full width karna zaroori hai */
+    .hero-btns a {
+        width: 100%;
+        text-decoration: none;
+    }
+}
 @media (max-width: 991px) {
     .hero-section {
         height: auto;
         padding-top: 100px;
         text-align: center;
     }
-
+ 
     .hero-row { flex-direction: column; }
 
     .hero-text h1 { font-size: 2.2rem; }
@@ -695,8 +727,7 @@ body {
     height: 400px; 
     overflow: hidden;
     border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 20px; 
 }
 
 .member-img {
