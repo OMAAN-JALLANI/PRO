@@ -77,29 +77,37 @@
                     <div class="orbit-track">
                         
                         <div class="orbit-item item-1">
-                            <div class="icon-circle"><i class="fa-solid fa-truck-medical"></i></div>
-                            <span>Crisis Intervention</span>
+                            <div class="icon-circle"><i class="fa-solid fa-circle-question"></i></div>
+                            <span>Precontemplation</span>
                         </div>
 
                         <div class="orbit-item item-2">
-                            <div class="icon-circle"><i class="fa-solid fa-shield-virus"></i></div>
-                            <span>Relapse Prevention</span>
+                            <div class="icon-circle"><i class="fa-solid fa-brain"></i></div>
+                            <span>Contemplation</span>
                         </div>
 
                         <div class="orbit-item item-3">
-                            <div class="icon-circle"><i class="fa-solid fa-brain"></i></div>
-                            <span>Psychological Service</span>
+                            <div class="icon-circle"><i class="fa-solid fa-clipboard-list"></i></div>
+                            <span>Preparation</span>
                         </div>
 
                         <div class="orbit-item item-4">
-                            <div class="icon-circle"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                            <span>Addiction Treatment</span>
+                            <div class="icon-circle"><i class="fa-solid fa-person-running"></i></div>
+                            <span>Action</span>
+                        </div>
+
+                        <div class="orbit-item item-5">
+                            <div class="icon-circle"><i class="fa-solid fa-shield-heart"></i></div>
+                            <span>Maintenance</span>
+                        </div>
+
+                        <div class="orbit-item item-6">
+                            <div class="icon-circle"><i class="fa-solid fa-rotate-left"></i></div>
+                            <span>Relapse Prevention</span>
                         </div>
 
                     </div>
                 </div>
-
-            </div>
 
         </div>
     </div>
@@ -246,6 +254,120 @@
         </div>
     </div>
 </section>
+
+<!--life AT  PRO-->
+<section class="life-at-pro-section" id="life-at-pro">
+    <div class="container">
+        
+        <div class="text-center mb-5">
+            <span class="section-subtitle">Our Environment</span>
+            <h2 class="section-title">Life at PRO</h2>
+            <p class="section-desc">Experience the comfortable, engaging, and healing atmosphere we provide.</p>
+        </div>
+
+        <div class="row g-3 justify-content-center">
+            
+            <div class="col-lg-3 col-6">
+                <div class="life-card">
+                    <img src="./Images/building.jpg" alt="Building" class="life-img">
+                    <div class="life-overlay">
+                        <h4>PRO Campus</h4>
+                        <p>Peaceful Environment</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="life-card">
+                    <img src="./Images/b2.jpg" alt="BBQ" class="life-img">
+                    <div class="life-overlay">
+                        <h4>BBQ Night</h4>
+                        <p>Community Dinner</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="life-card">
+                    <img src="./Images/room1.jpg" alt="Room" class="life-img">
+                    <div class="life-overlay">
+                        <h4>Comfortable Rooms</h4>
+                        <p>Comfortable Stay</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="life-card">
+                    <img src="./Images/room2.jpg" alt="Medical Care" class="life-img">
+                    <div class="life-overlay">
+                        <h4>Medical Care</h4>
+                        <p>24/7 Monitoring</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 hidden-gallery" style="display: none;">
+                <div class="row g-3 justify-content-center">
+                    
+                    
+
+                    <div class="col-lg-3 col-6">
+                        <div class="life-card">
+                            <img src="./Images/room3.jpg" alt="Interior" class="life-img">
+                            <div class="life-overlay">
+                                <h4>Interior View</h4>
+                                <p>Modern Facilities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                        <div class="life-card">
+                            <img src="./Images/time.jpg" alt="Fitness" class="life-img">
+                            <div class="life-overlay">
+                                <h4>TIME TABLE</h4>
+                                <p>At PRO</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <button id="viewMoreBtn" class="btn-pro" onclick="toggleGallery()">View More <i class="fa-solid fa-angle-down"></i></button>
+            <button id="viewLessBtn" class="btn-pro" onclick="toggleGallery()" style="display: none;">View Less <i class="fa-solid fa-angle-up"></i></button>
+        </div>
+
+    </div>
+</section>
+<script>
+    function toggleGallery() {
+        const hiddenGallery = document.querySelector('.hidden-gallery');
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        const viewLessBtn = document.getElementById('viewLessBtn');
+
+        if (hiddenGallery.style.display === "none") {
+            // Show Images
+            hiddenGallery.style.display = "block";
+            // Buttons Swap
+            viewMoreBtn.style.display = "none";
+            viewLessBtn.style.display = "inline-block";
+        } else {
+            // Hide Images
+            hiddenGallery.style.display = "none";
+            // Buttons Swap
+            viewMoreBtn.style.display = "inline-block";
+            viewLessBtn.style.display = "none";
+            
+            // Optional: Scroll back slightly up so user isn't lost
+            document.getElementById('life-at-pro').scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
 <!--CEOOOOOOOOOOOOOO-->
 <section class="team-section" id="team" data-aos="fade-up">
     <div class="container">
@@ -391,6 +513,17 @@
                         <i class="fa-solid fa-phone"></i>
                         <span>
                             <a href="tel:+923399123489">+923399123489</a>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>
+                            <a href="tel:03007992533">03007992533</a>
+                        </span>
+                    </li><li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>
+                            <a href="tel:0323-7280567">0323-7280567</a>
                         </span>
                     </li>
                     <li>

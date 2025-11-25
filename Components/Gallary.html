@@ -15,8 +15,7 @@
     
     <link rel="stylesheet" href="style.css">
     <style>
-       
-.gallery-header {
+  .gallery-header {
     height: 400px;  
     width: 100%;
     position: relative;
@@ -26,7 +25,7 @@
     text-align: center;
     color: white;
      
-    background: url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+    background: url('../Images/cover.jpg') no-repeat center center/cover;
     background-attachment: fixed;  
 }
  
@@ -61,7 +60,6 @@
 }
 
 .masonry-grid {
-     
     column-count: 3; 
     column-gap: 20px;
 }
@@ -86,7 +84,37 @@
 .gallery-item:hover img {
     transform: scale(1.1);
 }
- 
+
+/* --- VIDEO STYLING ADDED HERE --- */
+.gallery-video {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-video {
+    transform: scale(1.1);
+}
+
+/* Specific Height Fix for Videos */
+#j-video, #i-video {
+    height: 350px;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: black;
+}
+
+#j-video video, #i-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ------------------------------- */
+
 .img-overlay {
     position: absolute;
     bottom: -100%;  
@@ -114,14 +142,25 @@
     margin: 0;
     opacity: 0.9;
 }
-
  
 @media (max-width: 991px) {
-    .gallery-header { height: 300px; }
+    .gallery-header { 
+        height: 300px;
+        /* Mobile Background Zoom Fix */
+        background-attachment: scroll !important; 
+        background-position: center center !important;
+        background-size: cover !important; 
+    }
+    
     .gallery-header h1 { font-size: 2.2rem; }
     
     .masonry-grid {
         column-count: 2;  
+    }
+
+    /* Mobile Video Height */
+    #j-video, #i-video {
+        height: 250px;
     }
 }
 
@@ -334,6 +373,33 @@
     text-decoration: none;
 }
  
+/* ========================
+   SPECIFIC VIDEO CARD FIX (#j-video)
+   ======================== */
+
+/* 1. Card Container ka size fix karo */
+#j-video {
+    height: 350px; /* Laptop par height fix (taake bohot lambi na ho) */
+    width: 100%;
+    overflow: hidden; /* Agar video bahar nikle to kat jaye */
+    position: relative;
+    border-radius: 15px;
+}
+
+/* 2. Video ko us box k andar fit karo */
+#j-video .gallery-video {
+    width: 100%;
+    height: 100%;       /* Box ki height le le */
+    object-fit: cover;  /* Zaroori: Video crop ho kar fit hogi, stretch nahi hogi */
+    display: block;
+}
+
+/* --- MOBILE ADJUSTMENT --- */
+@media (max-width: 991px) {
+    #j-video {
+        height: 250px; /* Mobile par height thori aur kam */
+    }
+}
 @media (max-width: 991px) {
     .footer-row {
         flex-direction: column;
@@ -394,105 +460,203 @@
     </nav>
 
     <header class="gallery-header">
-        <div class="overlay"></div>
-        <div class="container text-center content">
-            <h1 data-aos="fade-up">Moments of Impact</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Witnessing our journey of strategic partnerships, awards, and recovery success stories.</p>
-        </div>
-    </header>
+    <div class="overlay"></div>
+    <div class="container text-center content">
+        <h1 data-aos="fade-up">Moments of Impact</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Witnessing our journey of strategic partnerships, awards, and recovery success stories.</p>
+    </div>
+</header>
 
-    <section class="gallery-page-section">
-        <div class="container">
+<section class="gallery-page-section">
+    <div class="container">
+        
+        <div class="text-center mb-5">
+            <span class="section-subtitle">Official Gallery</span>
+        </div>
+
+        <div class="masonry-grid">
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/colobration.jpg" alt="Founder Signing">
+                <div class="img-overlay">
+                    <h5>Founder Signing Ceremony</h5>
+                    <p>Mr. Imran with Partners</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/std3.jpg" alt="Founder Signing">
+                <div class="img-overlay">
+                    <h5>Awareness</h5>
+                    <p>PRO Expansion</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/agremnt.jpg" alt="Co-Founder Signing">
+                <div class="img-overlay">
+                    <h5>Co-Founder Signing</h5>
+                    <p>Mr. Junaid Ahmad</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <video autoplay muted loop playsinline class="gallery-video">
+                    <source src="../Images/gv1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="img-overlay">
+                    <h5>UMT Ceremony</h5>
+                    <p>Guest of Honor</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/UMT2.jpg" alt="UMT Ceremony">
+                <div class="img-overlay">
+                    <h5>UMT Event</h5>
+                    <p>Addressing the Audience</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/si.jpg" alt="Founder with Students">
+                <div class="img-overlay">
+                    <h5>Student Interaction</h5>
+                    <p>Founder guiding youth</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" >
+                <img src="../Images/ms.jpg" alt="Co-Founder with Students">
+                <div class="img-overlay">
+                    <h5>Mentorship Session</h5>
+                    <p>Co-Founder at University</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/ad1.jpg" alt="Awards Distribution">
+                <div class="img-overlay">
+                    <h5>Awards Distribution</h5>
+                    <p>Encouraging Talent</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/UMTb1.jpg" alt="UMT Ceremony">
+                <div class="img-overlay">
+                    <h5>UMT 1st Batch</h5>
+                    <p>BS Students for Placement at PRO</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/MOU.jpg" alt="MOU Signing">
+                <div class="img-overlay">
+                    <h5>MOU Signing</h5>
+                    <p>Official Partnership</p>
+                </div>
+            </div>
+
+             <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/kds.jpg" alt="Talking to Kids">
+                <div class="img-overlay">
+                    <h5>Future Generation</h5>
+                    <p>Co-Founder Interaction</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/celibrate.jpg" alt="Founder Signing">
+                <div class="img-overlay">
+                    <h5>Celebrating A Milestone</h5>
+                    <p>Mr. Imran with Partners</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/IM-S.jpg" alt="Founder Signing">
+                <div class="img-overlay">
+                    <h5>MOU between PRO</h5>
+                    <p>Lahore Leads Univesity in flag pics</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/j-s.jpg" alt="Co-Founder Signing">
+                <div class="img-overlay">
+                   <h5>MOU between PRO</h5>
+                    <p>Lahore Leads Univesity in flag pics</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" id="i-video">
+                <video autoplay muted loop playsinline class="gallery-video">
+                    <source src="../Images/i.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="img-overlay">
+                    <h5>Event Highlight</h5>
+                    <p>Official Coverage</p>
+                </div>
+            </div>
+
             
-            <div class="text-center mb-5">
-                <span class="section-subtitle">Official Gallery</span>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/day.jpg" alt="UMT Ceremony">
+                <div class="img-overlay">
+                    <h5>Rehab Day</h5>
+                    <p>Free Campus in UMT</p>
+                </div>
             </div>
 
-            <div class="masonry-grid">
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/sign.jpg" alt="Founder Signing">
-                    <div class="img-overlay">
-                        <h5>Founder Signing Ceremony</h5>
-                        <p>Mr. Imran with Partners</p>
-                    </div>
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/im.jpg" alt="Founder with Students">
+                <div class="img-overlay">
+                    <h5>Mr. Imran</h5>
+                    <p>Founder guiding youth</p>
                 </div>
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/std3.jpg" alt="Founder Signing">
-                    <div class="img-overlay">
-                        <h5>Awareness</h5>
-                        <p>PRO Expansion</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/agremnt.jpg" alt="Co-Founder Signing">
-                    <div class="img-overlay">
-                        <h5>Co-Founder Signing</h5>
-                        <p>Mr. Junaid Ahmad</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/UMT.jpg" alt="UMT Ceremony">
-                    <div class="img-overlay">
-                        <h5>UMT Ceremony</h5>
-                        <p>Guest of Honor</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/UMT2.jpg" alt="UMT Ceremony">
-                    <div class="img-overlay">
-                        <h5>UMT Event</h5>
-                        <p>Addressing the Audience</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/si.jpg" alt="Founder with Students">
-                    <div class="img-overlay">
-                        <h5>Student Interaction</h5>
-                        <p>Founder guiding youth</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/ms.jpg" alt="Co-Founder with Students">
-                    <div class="img-overlay">
-                        <h5>Mentorship Session</h5>
-                        <p>Co-Founder at University</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/ad1.jpg" alt="Awards Distribution">
-                    <div class="img-overlay">
-                        <h5>Awards Distribution</h5>
-                        <p>Encouraging Talent</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/MOU.jpg" alt="MOU Signing">
-                    <div class="img-overlay">
-                        <h5>MOU Signing</h5>
-                        <p>Official Partnership</p>
-                    </div>
-                </div>
-
-                 <div class="gallery-item" data-aos="fade-up">
-                    <img src="../Images/kds.jpg" alt="Talking to Kids">
-                    <div class="img-overlay">
-                        <h5>Future Generation</h5>
-                        <p>Co-Founder Interaction</p>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="gallery-item" data-aos="fade-up" id="j-video">
+                <video autoplay muted loop playsinline class="gallery-video">
+                    <source src="../Images/j.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="img-overlay">
+                    <h5>Mentorship Session</h5>
+                    <p>Co-Founder at University</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/ad1.jpg" alt="Awards Distribution">
+                <div class="img-overlay">
+                    <h5>Awards Distribution</h5>
+                    <p>Encouraging Talent</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/MOU.jpg" alt="MOU Signing">
+                <div class="img-overlay">
+                    <h5>MOU Signing</h5>
+                    <p>Official Partnership</p>
+                </div>
+            </div>
+
+             <div class="gallery-item" data-aos="fade-up">
+                <img src="../Images/UMT.jpg" alt="Talking to Kids">
+                <div class="img-overlay">
+                    <h5>UMT Distribution</h5>
+                    <p>Co-Founder Interaction</p>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <footer class="pro-footer">
     <div class="footer-container">
@@ -536,6 +700,17 @@
                         <i class="fa-solid fa-phone"></i>
                         <span>
                             <a href="tel:+923399123489">+923399123489</a>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>
+                            <a href="tel:03007992533">03007992533</a>
+                        </span>
+                    </li><li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>
+                            <a href="tel:0323-7280567">0323-7280567</a>
                         </span>
                     </li>
                     <li>

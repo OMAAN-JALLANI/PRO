@@ -185,6 +185,9 @@ body {
 .btn-primary-hero:hover { background: var(--secondary); transform: translateY(-3px); }
 .btn-secondary-hero:hover { background: var(--primary); color: white; }
  
+/* ========================
+   HERO VISUAL (PERFECT ROTATION)
+   ======================== */
 .hero-visual {
     height: 500px;
     display: flex;
@@ -192,32 +195,30 @@ body {
     align-items: center;
     position: relative;
 }
- 
+
+/* Watermark Background */
 .watermark-bg {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    opacity: 0.08;  
+    opacity: 0.08;
     pointer-events: none;
 }
+.watermark-bg img { width: 450px; height: auto; filter: grayscale(100%); }
 
-.watermark-bg img {
-    width: 450px;  
-    height: auto;
-    filter: grayscale(100%);
-}
- 
+/* --- ORBIT CONTAINER (Main Circle Size) --- */
 .orbit-container {
     position: relative;
-    width: 420px;  
-    height: 420px;
+    width: 450px;  /* Desktop Size */
+    height: 450px; /* Desktop Size */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
 }
- 
+
+/* Center Hub (Leaf Icon) */
 .center-hub {
     position: absolute;
     width: 90px;
@@ -233,34 +234,58 @@ body {
     z-index: 5;
     border: 6px solid white;
 }
- 
+
+/* Rotating Track */
 .orbit-track {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px dashed rgba(10, 135, 14, 0.3); /* Dotted Line */
-    animation: rotateCircle 25s linear infinite; /* Slow Rotation */
+    border: 2px dashed rgba(10, 135, 14, 0.3);
+    animation: rotateCircle 30s linear infinite;
 }
- 
+
+/* --- ORBIT ITEMS (Shared Styling) --- */
 .orbit-item {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 120px; 
-    animation: counterRotate 25s linear infinite; 
+    width: 120px;
+    /* Center the item perfectly on its coordinate */
+    transform: translate(-50%, -50%); 
+    /* Counter Rotate inside Animation to keep text straight */
 }
- 
-.item-1 { top: -25px; left: 50%; transform: translateX(-50%); } 
-.item-2 { top: 50%; right: -25px; transform: translateY(-50%); } 
-.item-3 { bottom: -25px; left: 50%; transform: translateX(-50%); } 
-.item-4 { top: 50%; left: -25px; transform: translateY(-50%); } 
- 
+
+/* --- PERFECT EQUAL SPACING (Formula) --- */
+/* Humne Circle ko 6 hisson mein taqseem kiya hai.
+   Har box ka faasla bilkul same hoga.
+*/
+
+/* 1. Top Center */
+.item-1 { top: 0%; left: 50%; }
+
+/* 2. Top Right */
+.item-2 { top: 25%; left: 93%; }
+
+/* 3. Bottom Right */
+.item-3 { top: 75%; left: 93%; }
+
+/* 4. Bottom Center */
+.item-4 { top: 100%; left: 50%; }
+
+/* 5. Bottom Left */
+.item-5 { top: 75%; left: 7%; }
+
+/* 6. Top Left */
+.item-6 { top: 25%; left: 7%; }
+
+
+/* Icon Styling */
 .icon-circle {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     background: white;
     border: 2px solid var(--primary);
     border-radius: 50%;
@@ -268,93 +293,134 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--primary);
-    font-size: 24px;
+    font-size: 22px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     transition: 0.3s;
 }
- 
+
+/* Text Styling */
 .orbit-item span {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--dark);
     background: rgba(255, 255, 255, 0.95);
-    padding: 4px 10px;
-    border-radius: 12px;
+    padding: 4px 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     border: 1px solid #eee;
-}
- 
-.orbit-container:hover .orbit-track,
-.orbit-container:hover .orbit-item {
-    animation-play-state: paused;  
+    white-space: nowrap; /* Text tootay na */
 }
 
-.orbit-item:hover .icon-circle {
-    background: var(--accent);  
-    color: white;
-    transform: scale(1.1);
+/* Hover Effects */
+.orbit-container:hover .orbit-track { animation-play-state: paused; }
+.orbit-container:hover .orbit-item .icon-circle { 
+    animation-play-state: paused;
+    background: var(--accent); 
+    color: white; 
+    transform: scale(1.1); 
 }
- 
-@keyframes rotateCircle { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@keyframes counterRotate { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
 
- 
+/* --- ANIMATIONS --- */
+/* Pura Circle Ghoomega */
+@keyframes rotateCircle { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
+}
+
+/* Item k andar Text wapis ulta ghoomega taake seedha dikhay */
+/* Notice: Maine yahan 'transform' use nahi kiya taake positioning kharab na ho */
+.orbit-item {
+    animation: counterRotate 30s linear infinite;
+}
+
+@keyframes counterRotate { 
+    from { transform: translate(-50%, -50%) rotate(0deg); } 
+    to { transform: translate(-50%, -50%) rotate(-360deg); } 
+}
+
+
+/* ========================
+   MOBILE RESPONSIVE (Perfect Fit)
+   ======================== */
 @media (max-width: 991px) {
-     
-    .hero-btns {
-        flex-direction: column;  
-        gap: 10px;               
+    .hero-visual {
+        height: 400px;
         width: 100%;
-        max-width: 280px;       
-        margin: 0 auto 30px;    
+        margin-top: 50px;
+        overflow: hidden; 
     }
- 
-    .btn-primary-hero, 
-    .btn-secondary-hero {
-        padding: 10px 20px;      
-        font-size: 14px;         
-        width: 100%;             
+
+    /* Mobile par Circle Chota kar diya */
+    .orbit-container {
+        width: 290px; 
+        height: 290px;
+    }
+
+    .watermark-bg img { width: 260px; }
+    
+    .icon-circle { width: 40px; height: 40px; font-size: 16px; }
+    
+    /* Text thora chota */
+    .orbit-item span { 
+        font-size: 10px; 
+        padding: 2px 6px;
+        max-width: 90px;
+        white-space: normal; /* Mobile pe agar lamba ho to neeche aye */
+        line-height: 1.1;
+    }
+}
+
+
+
+
+
+
+
+/* ========================
+   MOBILE BUTTONS FIX
+   ======================== */
+@media (max-width: 991px) {
+    
+    /* Container ko Flex Column bana diya */
+    .hero-btns {
         display: flex;
-        justify-content: center;  
-        align-items: center;
-        height: 45px;           
+        flex-direction: column; /* Ek k neeche ek */
+        align-items: center;    /* Center mein laye */
+        gap: 15px;              /* Beech mein gap */
+        width: 100%;
+        margin-bottom: 30px;    /* Neeche gap */
     }
-     
+
+    /* Link Tag (<a>) ko set karna zaroori hai */
     .hero-btns a {
         width: 100%;
+        max-width: 300px; /* Button ki hadd */
         text-decoration: none;
-    }
-}
-@media (max-width: 991px) {
-    .hero-section {
-        height: auto;
-        padding-top: 100px;
-        text-align: center;
-    }
- 
-    .hero-row { flex-direction: column; }
-
-    .hero-text h1 { font-size: 2.2rem; }
-    .tagline { justify-content: center; font-size: 1.1rem; }
-    .hero-btns { justify-content: center; }
- 
-    .hero-visual {
-        height: 400px;  
-        width: 100%;
-        margin-top: 40px;
-    }
- 
-    .orbit-container {
-        width: 300px;
-        height: 300px;
+        display: block;
     }
 
-    .watermark-bg img { width: 280px; }
-    
-    .icon-circle { width: 45px; height: 45px; font-size: 18px; }
-    .orbit-item span { font-size: 11px; max-width: 90px; }
+    /* Buttons Styling */
+    .btn-primary-hero, 
+    .btn-secondary-hero {
+        width: 100%;          /* Full Width */
+        max-width: 300px;     /* Limit Width */
+        padding: 12px 0;      /* Padding thori kam */
+        font-size: 14px;      /* Font size adjust */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;       /* Center align */
+        height: 50px;         /* Fixed Height neat look k liye */
+    }
 }
+
+
+
+
+
+
+
  
 .events-grid {
     display: grid; 
@@ -1256,5 +1322,107 @@ body {
         opacity: 1 !important;
         padding-left: 0 !important;
         white-space: normal;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================
+   LIFE at PRO
+   ======================== */
+
+   /* ========================
+   LIFE AT PRO SECTION
+   ======================== */
+.life-at-pro-section {
+    padding: 80px 0;
+    background-color: #fcfcfc; /* Halka sa grey/white mix */
+}
+
+/* --- CARD STYLING --- */
+.life-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px; /* Fixed height for uniformity */
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.life-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effect: Zoom Image */
+.life-card:hover .life-img {
+    transform: scale(1.1);
+}
+
+/* --- OVERLAY STYLING (Green Gradient) --- */
+.life-overlay {
+    position: absolute;
+    bottom: -100%; /* Initially Hidden below */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(4, 49, 2, 0.95) 20%,   60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: bottom 0.4s ease-in-out;
+}
+
+/* Hover Effect: Show Overlay */
+.life-card:hover .life-overlay {
+    bottom: 0;
+}
+
+.life-overlay h4 {
+    color: var(--accent); /* Gold Heading */
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+}
+
+.life-overlay p {
+    color: white;
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* ========================
+   MOBILE RESPONSIVE
+   ======================== */
+@media (max-width: 991px) {
+    .life-card {
+        height: 200px; /* Mobile pe thora chota card */
+    }
+    
+    .life-overlay h4 {
+        font-size: 0.9rem;
+    }
+    
+    .life-overlay p {
+        font-size: 0.75rem;
     }
 }
