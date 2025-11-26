@@ -1473,3 +1473,26 @@ body {
 
 
 
+
+
+/* ========================
+   MOBILE ORBIT TEXT FIX
+   ======================== */
+@media (max-width: 991px) {
+    
+    /* Item Container ki width fix ki */
+    .orbit-item {
+        width: 90px; /* Thora chota area */
+    }
+
+    /* Text Span Styling */
+    .orbit-item span {
+        white-space: normal !important; /* Zaroori: Text toot kar neeche aye */
+        word-wrap: break-word;          /* Agar lafz bohot lamba ho to toote */
+        font-size: 9px !important;      /* Font thora chota */
+        line-height: 1.2;               /* Lines k beech gap kam */
+        padding: 4px 6px;               /* Padding adjust */
+        max-width: 100%;                /* Container se bahar na jaye */
+        display: inline-block;
+    }
+}
