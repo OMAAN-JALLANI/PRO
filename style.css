@@ -415,6 +415,26 @@ body {
     }
 }
 
+/* Hover Effects */
+
+/* Jab pure container pe mouse aye, to Track ruk jaye */
+.orbit-container:hover .orbit-track { 
+    animation-play-state: paused; 
+}
+
+/* Zaroori Fix: Jab container pe mouse aye, to Items ka Counter-Rotate bhi ruk jaye */
+/* Is se Text bhi apni jagah jam jayega */
+.orbit-container:hover .orbit-item {
+    animation-play-state: paused;
+}
+
+/* Jab kisi specific item pe mouse aye, to uska color change ho */
+.orbit-container:hover .orbit-item .icon-circle { 
+    /* Note: Animation state upar wale rule se control ho rahi hai */
+    background: var(--accent); 
+    color: white; 
+    transform: scale(1.1); 
+}
 
 
 
