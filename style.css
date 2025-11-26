@@ -219,20 +219,43 @@ body {
 }
 
 /* Center Hub (Leaf Icon) */
+ /* ========================
+   CENTER HUB IMAGE FIX (PADDING ADDED)
+   ======================== */
+
 .center-hub {
     position: absolute;
     width: 90px;
     height: 90px;
-    background: var(--primary);
-    border-radius: 50%;
+    
+    /* Background White (Jaisa tumne manga) */
+    background: white; 
+    
+    /* Border & Shape */  /* Border */
+    border-radius: 50%;      /* Gol Daira */
+    
+    /* Flexbox Center */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 35px;
-    box-shadow: 0 0 30px rgba(10, 135, 14, 0.4);
     z-index: 5;
-    border: 6px solid white;
+    
+    /* Shadow (Green Glow) */
+    box-shadow: 0 0 30px rgba(10, 135, 14, 0.4);
+    
+    /* --- MAIN FIX (Padding) --- */
+    /* Yahan padding di hai taake image border se door rahay */
+    padding: 15px; 
+    
+    overflow: hidden;
+}
+
+.hub-img {
+    width: 100%;
+    height: 100%;
+    /* Contain: Image puri dikhegi, kategi nahi */
+    object-fit: contain; 
+    display: block;
 }
 
 /* Rotating Track */
@@ -1446,3 +1469,7 @@ body {
         font-size: 0.75rem;
     }
 }
+
+
+
+
