@@ -123,12 +123,7 @@
     
      
 
-    <section class="drug-awareness-section">
-    <div class="container-fluid px-0"> 
-        
-      
-
-        <section class="drug-awareness-section">
+   <section class="drug-awareness-section">
     <div class="container-fluid px-0"> 
         
         <div class="text-center mb-5 mt-5">
@@ -137,151 +132,208 @@
             <p class="section-desc">Addiction destroys not just the body, but the soul.</p>
         </div>
 
-        <div class="drugs-container mb-3">
+        <div class="drugs-row">
             
-            <div class="drug-panel" style="background-image: url('./Images/drug/alco.jpg');">
-                <div class="drug-overlay"></div>
-                <h3>Alcohol</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Depressant shutting down organs.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-flask"></i> Liver Cirrhosis & Cancer</li>
-                        <li><i class="fa-solid fa-brain"></i> Wet Brain (Dementia)</li>
-                        <li><i class="fa-solid fa-bed-pulse"></i> Withdrawal can kill (Seizures)</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>Alcohol</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Alcohol</h3>
+                        <p class="impact"><strong>Impact:</strong> Organ Failure</p>
+                        <ul>
+                            <li><i class="fa-solid fa-flask"></i> Liver Cirrhosis</li>
+                            <li><i class="fa-solid fa-brain"></i> Brain Damage</li>
+                            <li><i class="fa-solid fa-bed-pulse"></i> Fatal Withdrawal</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="drug-panel" style="background-image: url('https://images.unsplash.com/photo-1527772439366-0740a3203f0d?q=80&w=800&auto=format&fit=crop');">
-                <div class="drug-overlay"></div>
-                <h3>Nicotine</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Leading cause of preventable death.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-lungs"></i> Lung Cancer (90% cases)</li>
-                        <li><i class="fa-solid fa-heart-crack"></i> Hardens Arteries (Stroke Risk)</li>
-                        <li><i class="fa-solid fa-teeth"></i> Gum Disease & Tooth Loss</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1527772439366-0740a3203f0d?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>Nicotine</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Nicotine</h3>
+                        <p class="impact"><strong>Impact:</strong> Cancer Risk</p>
+                        <ul>
+                            <li><i class="fa-solid fa-lungs"></i> Lung Cancer</li>
+                            <li><i class="fa-solid fa-heart-crack"></i> Stroke Risk</li>
+                            <li><i class="fa-solid fa-teeth"></i> Gum Disease</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="drug-panel" style="background-image: url('./Images/drug/canna.jpg');">
-                <div class="drug-overlay"></div>
-                <h3>Cannabis</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Impairs cognitive functions.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-brain"></i> Permanent IQ Drop (in youth)</li>
-                        <li><i class="fa-solid fa-ghost"></i> Triggers Schizophrenia</li>
-                        <li><i class="fa-solid fa-couch"></i> Amotivational Syndrome</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('./Images/drug/canna.jpg');">
+                        <div class="drug-overlay"></div>
+                        <h3>Cannabis</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Cannabis</h3>
+                        <p class="impact"><strong>Impact:</strong> Brain Fog</p>
+                        <ul>
+                            <li><i class="fa-solid fa-brain"></i> IQ Drop</li>
+                            <li><i class="fa-solid fa-ghost"></i> Psychosis Risk</li>
+                            <li><i class="fa-solid fa-couch"></i> Laziness Syndrome</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="drug-panel" style="background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=800&auto=format&fit=crop');">
-                <div class="drug-overlay"></div>
-                <h3>Opioids</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Blocks pain, stops breathing.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-lungs-virus"></i> Respiratory Failure (Coma)</li>
-                        <li><i class="fa-solid fa-syringe"></i> High Overdose Death Rate</li>
-                        <li><i class="fa-solid fa-virus"></i> Risk of HIV/Hepatitis</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>Opioids</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Opioids</h3>
+                        <p class="impact"><strong>Impact:</strong> Coma / Death</p>
+                        <ul>
+                            <li><i class="fa-solid fa-lungs-virus"></i> Respiratory Failure</li>
+                            <li><i class="fa-solid fa-syringe"></i> High Overdose</li>
+                            <li><i class="fa-solid fa-virus"></i> HIV Risk</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="drug-panel" style="background-image: url('https://images.unsplash.com/photo-1606166410292-0b445e994e43?q=80&w=800&auto=format&fit=crop');">
-                <div class="drug-overlay"></div>
-                <h3>Cocaine</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Powerful heart stimulant.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-heart-pulse"></i> Instant Cardiac Arrest</li>
-                        <li><i class="fa-solid fa-wind"></i> Nasal Septum Collapse</li>
-                        <li><i class="fa-solid fa-face-dizzy"></i> Extreme Paranoia</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1606166410292-0b445e994e43?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>Cocaine</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Cocaine</h3>
+                        <p class="impact"><strong>Impact:</strong> Heart Attack</p>
+                        <ul>
+                            <li><i class="fa-solid fa-heart-pulse"></i> Cardiac Arrest</li>
+                            <li><i class="fa-solid fa-wind"></i> Nasal Collapse</li>
+                            <li><i class="fa-solid fa-face-dizzy"></i> Extreme Paranoia</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="drugs-container">
+        <div class="drugs-row mt-3">
             
-            <div class="drug-panel" style="background-image: url('https://images.unsplash.com/photo-1628153443836-e8d1973685f4?q=80&w=800&auto=format&fit=crop');">
-                <div class="drug-overlay"></div>
-                <h3>Meth</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Destroys nervous system.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-skull-crossbones"></i> "Meth Mouth" (Rotting Teeth)</li>
-                        <li><i class="fa-solid fa-bug"></i> Feeling Bugs Under Skin</li>
-                        <li><i class="fa-solid fa-brain"></i> Dopamine Receptors Death</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1628153443836-e8d1973685f4?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>Meth</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Crystal Meth</h3>
+                        <p class="impact"><strong>Impact:</strong> Body Decay</p>
+                        <ul>
+                            <li><i class="fa-solid fa-skull-crossbones"></i> Teeth Rotting</li>
+                            <li><i class="fa-solid fa-bug"></i> Bugs under skin</li>
+                            <li><i class="fa-solid fa-brain"></i> Brain Damage</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="drug-panel" style="background-image: url('https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=800&auto=format&fit=crop');">
-                <div class="drug-overlay"></div>
-                <h3>Benzos</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Sedatives that cause blackouts.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-memory"></i> Total Memory Blackouts</li>
-                        <li><i class="fa-solid fa-bed"></i> Deadly if mixed with Alcohol</li>
-                        <li><i class="fa-solid fa-person-falling"></i> Loss of Motor Control</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>Benzos</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Benzos</h3>
+                        <p class="impact"><strong>Impact:</strong> Blackouts</p>
+                        <ul>
+                            <li><i class="fa-solid fa-memory"></i> Memory Loss</li>
+                            <li><i class="fa-solid fa-bed"></i> Deadly Sedation</li>
+                            <li><i class="fa-solid fa-person-falling"></i> Loss of Control</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="drug-panel" style="background-image: url('https://images.unsplash.com/photo-1599409636242-758c95c4f5f6?q=80&w=800&auto=format&fit=crop');">
-                <div class="drug-overlay"></div>
-                <h3>MDMA</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Overheats the body.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-temperature-arrow-up"></i> Severe Hyperthermia (Heatstroke)</li>
-                        <li><i class="fa-solid fa-droplet-slash"></i> Dehydration & Kidney Failure</li>
-                        <li><i class="fa-solid fa-face-sad-tear"></i> Post-use Severe Depression</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1599409636242-758c95c4f5f6?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>MDMA</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>MDMA</h3>
+                        <p class="impact"><strong>Impact:</strong> Heatstroke</p>
+                        <ul>
+                            <li><i class="fa-solid fa-temperature-arrow-up"></i> Severe Fever</li>
+                            <li><i class="fa-solid fa-droplet-slash"></i> Kidney Failure</li>
+                            <li><i class="fa-solid fa-face-sad-tear"></i> Severe Depression</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="drug-panel" style="background-image: url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop');">
-                <div class="drug-overlay"></div>
-                <h3>Inhalants</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Starves brain of oxygen.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-brain"></i> Immediate Brain Damage</li>
-                        <li><i class="fa-solid fa-heart-crack"></i> "Sudden Sniffing Death"</li>
-                        <li><i class="fa-solid fa-ear-deaf"></i> Hearing Loss & Spasms</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>Inhalants</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Inhalants</h3>
+                        <p class="impact"><strong>Impact:</strong> Brain Death</p>
+                        <ul>
+                            <li><i class="fa-solid fa-brain"></i> Oxygen Starvation</li>
+                            <li><i class="fa-solid fa-heart-crack"></i> Sudden Death</li>
+                            <li><i class="fa-solid fa-ear-deaf"></i> Hearing Loss</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="drug-panel" style="background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop');">
-                <div class="drug-overlay"></div>
-                <h3>LSD</h3>
-                <div class="drug-info">
-                    <p class="danger-text"><strong>Impact:</strong> Distorts reality & perception.</p>
-                    <ul class="danger-list">
-                        <li><i class="fa-solid fa-eye"></i> Terrifying "Bad Trips"</li>
-                        <li><i class="fa-solid fa-clock-rotate-left"></i> Flashbacks years later</li>
-                        <li><i class="fa-solid fa-person-falling-burst"></i> Accidents due to delusions</li>
-                    </ul>
+            <div class="drug-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front" style="background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop');">
+                        <div class="drug-overlay"></div>
+                        <h3>LSD</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>LSD</h3>
+                        <p class="impact"><strong>Impact:</strong> Hallucinations</p>
+                        <ul>
+                            <li><i class="fa-solid fa-eye"></i> Bad Trips</li>
+                            <li><i class="fa-solid fa-clock-rotate-left"></i> Flashbacks</li>
+                            <li><i class="fa-solid fa-person-falling-burst"></i> Delusional Accidents</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
-        
-    </div>
-</section>
+
+<script>
+    function flipCard(card) {
+        if (window.innerWidth < 992) {
+            card.classList.toggle('flipped');
+        }
+    }
+</script>
 <style>
+
+    
     /* ========================
-   DRUG AWARENESS (10 CARDS GRID)
+   DRUG AWARENESS (10 CARDS GRID - FIXED)
    ======================== */
 .drug-awareness-section {
     padding: 0 0 80px 0;
@@ -291,9 +343,9 @@
 /* Container for each row */
 .drugs-container {
     display: flex;
-    width: 95%; /* Thora width barhaya taake 5 fit ayen */
+    width: 95%; 
     max-width: 1400px;
-    height: 250px; /* Fixed Height (250px) Jaisa manga */
+    height: 250px; /* Fixed Height Desktop */
     margin: 0 auto;
     gap: 10px;
 }
@@ -302,7 +354,7 @@
 .drug-panel {
     background-size: cover;
     background-position: center;
-    border-radius: 15px; /* Thora radius kam kiya taake compact lage */
+    border-radius: 15px;
     color: white;
     cursor: pointer;
     flex: 1; 
@@ -313,18 +365,19 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* --- HOVER EFFECT --- */
-.drug-panel:hover {
-    flex: 3; /* 5 cards hain to flex 3 kaafi hai */
+/* --- HOVER & ACTIVE EFFECT (DESKTOP) --- */
+/* .active class add ki hai taake JS se click par bhi chalay */
+.drug-panel:hover,
+.drug-panel.active {
+    flex: 3; /* Expand Card */
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     border-color: var(--primary);
 }
 
-/* Dark Overlay (Adjusted) */
+/* Dark Overlay */
 .drug-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    /* Gradient thora neechay rakha taake image nazar aye */
     background: linear-gradient(to top, rgba(4, 49, 2, 0.95) 15%, rgba(4, 49, 2, 0.6) 40%, transparent 100%);
     z-index: 1;
 }
@@ -334,7 +387,7 @@
     position: absolute;
     bottom: 20px;
     left: 15px;
-    font-size: 1.2rem; /* Font thora chota taake fit aye */
+    font-size: 1.2rem;
     font-weight: 800;
     margin: 0;
     z-index: 2;
@@ -343,10 +396,12 @@
     transition: all 0.5s ease;
     transform: none; 
     writing-mode: horizontal-tb;
+    pointer-events: none; /* Click pass-through */
 }
 
-/* Hover Heading */
-.drug-panel:hover h3 {
+/* Hover/Active Heading */
+.drug-panel:hover h3,
+.drug-panel.active h3 {
     bottom: auto;
     top: 25px;
     left: 20px;
@@ -354,36 +409,36 @@
     color: var(--accent);
 }
 
-/* --- DRUG INFO (NO OVERLAP FIX) --- */
+/* --- DRUG INFO --- */
 .drug-info {
     position: absolute;
     bottom: 15px;
     left: 20px;
-    right: 10px; /* Right se gap taake text katay na */
+    right: 10px;
     opacity: 0;
     z-index: 2;
     transform: translateY(20px);
     transition: 0.5s ease;
     transition-delay: 0.1s;
-    
-    /* Text Overlap Fix */
-    min-width: 250px; /* Minimum width taake list sahi dikhe */
+    min-width: 250px;
+    pointer-events: none; /* Click pass-through */
 }
 
-.drug-panel:hover .drug-info {
+/* Hover/Active Info Show */
+.drug-panel:hover .drug-info,
+.drug-panel.active .drug-info {
     opacity: 1;
     transform: translateY(0);
 }
 
 .danger-text { 
-    font-size: 0.9rem; /* Text chota kiya taake 250px height mein fit aye */
+    font-size: 0.9rem; 
     margin-bottom: 10px; 
     font-weight: 300; 
     line-height: 1.3;
 }
 
 .danger-list { list-style: none; padding: 0; margin: 0; }
-
 .danger-list li { 
     font-size: 0.85rem; 
     margin-bottom: 5px; 
@@ -392,52 +447,207 @@
     align-items: center; 
     gap: 8px; 
 }
-
 .danger-list i { color: #ff4d4d; font-size: 1rem; }
-
 /* ========================
-   MOBILE RESPONSIVE (Vertical Stack)
+   DRUG AWARENESS (FIXED LAYOUT)
    ======================== */
-@media (max-width: 991px) {
-    .drugs-container {
-        flex-direction: column; /* Upar Neeche */
-        height: auto; /* Height auto taake jitne cards hon utni height ho */
+.drug-awareness-section {
+    padding: 0 0 80px 0;
+    background-color: var(--light);
+}
+
+/* -----------------------------
+   DESKTOP STYLES (EXPAND ON HOVER)
+   ----------------------------- */
+@media (min-width: 992px) {
+    
+    /* Har Row ko alag flex container banaya */
+    .drugs-row {
+        display: flex;
         width: 95%;
-        gap: 15px;
+        max-width: 1400px;
+        margin: 0 auto;
+        gap: 10px;
+        justify-content: center;
+        height: 250px; /* Desktop Height Fixed */
     }
 
-    .drug-panel {
-        width: 100%;
-        height: 80px; /* Closed state height (Small) */
+    /* Card styling */
+    .drug-card {
+        flex: 1; /* By default sab barabar (1x) */
         border-radius: 15px;
-        transition: height 0.5s ease; /* Height animation */
-        flex: none; /* Flex disable taake height control karein */
+        cursor: pointer;
+        position: relative;
+        transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        overflow: hidden;
     }
 
-    /* Mobile Expand Effect */
-    .drug-panel:hover, 
-    .drug-panel:active {
-        height: 280px; /* Open state height */
+    .card-inner { width: 100%; height: 100%; }
+    
+    .card-front {
+        width: 100%; height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
     }
 
-    .drug-panel h3 {
-        font-size: 1.1rem;
-        bottom: 30px; /* Center align vertically when closed */
+    /* --- HOVER MAGIC --- */
+    .drug-card:hover {
+        flex: 3; /* Hover karne par 3x bara ho jaye */
+        z-index: 10;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    .drug-panel:hover h3 {
-        top: 20px;
-        font-size: 1.4rem;
+    /* Heading Animation */
+    .card-front h3 {
+        position: absolute;
+        bottom: 20px; left: 20px;
+        color: white; font-size: 1.2rem; text-transform: uppercase;
+        z-index: 2; font-weight: 800;
+        transition: 0.4s;
     }
 
-    .drug-info {
-        bottom: 20px;
-        left: 20px;
-        min-width: auto;
+    .drug-card:hover .card-front h3 {
+        bottom: auto; top: 20px; font-size: 2rem; color: var(--accent);
+    }
+
+    /* Back Info (Fade In) */
+    .card-back {
+        position: absolute;
+        bottom: 20px; left: 20px;
+        opacity: 0;
+        transition: 0.5s ease;
+        z-index: 3;
+        color: white;
+        pointer-events: none;
+    }
+
+    .drug-card:hover .card-back {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .card-back h3 { display: none; } /* Desktop pe naam front se ayega */
+    
+    .drug-overlay {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to top, rgba(4, 49, 2, 0.95), transparent);
     }
 }
+
+/* -----------------------------
+   MOBILE STYLES (GRID + FLIP)
+   ----------------------------- */
+@media (max-width: 991px) {
+    
+    /* MOBILE FIX: Container ko 'contents' display kar diya taake rows ka structure toot jaye */
+    /* Is se saare cards aik hi flow mein aa jayenge */
+    .drugs-row {
+        display: contents; 
+    }
+
+    /* Ab hum aik naya grid container banayenge jo wrap karega */
+    /* Lekin chunke HTML mein 2 alag rows hain, hum unko CSS Grid se jor nahi sakte easily */
+    /* Isliye best tareeqa ye hai ke hum cards ko seedha float karwayen */
+
+    .drug-awareness-section .container-fluid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 Cards per line */
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    /* Heading waghaira ko full width dena parega */
+    .text-center {
+        grid-column: 1 / -1; /* Heading poori jagah le */
+    }
+
+    /* 3D Flip Setup */
+    .drug-card {
+        background-color: transparent;
+        height: 220px; /* Card Height */
+        perspective: 1000px;
+        cursor: pointer;
+        width: 100%; /* Full width of column */
+        margin-bottom: 0; /* Gap grid sambhal lega */
+    }
+
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    /* Javascript class for Flip */
+    .drug-card.flipped .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; /* Peeche se chup jaye */
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    /* Front Side */
+    .card-front {
+        background-color: #bbb;
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+    .card-front h3 {
+        position: absolute;
+        bottom: 10px; left: 0; right: 0;
+        font-size: 1rem;
+        background: rgba(4, 49, 2, 0.8);
+        padding: 5px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    /* Back Side (Rotated) */
+    .card-back {
+        background-color: var(--secondary); /* Dark Green */
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card-back h3 {
+        font-size: 1.1rem;
+        color: var(--accent);
+        margin-bottom: 5px;
+    }
+
+    .card-back .impact { font-size: 0.8rem; margin-bottom: 8px; }
+
+    .card-back ul { list-style: none; padding: 0; text-align: left; }
+
+    .card-back li {
+        font-size: 0.75rem; 
+        margin-bottom: 4px;
+        display: flex; align-items: center; gap: 5px;
+    }
+    
+    .card-back i { color: #ff6b6b; font-size: 0.9rem; }
+    
+    .drug-overlay { display: none; }
+}
 </style>
- 
 <!--------------------------------------->
  <section class="video-scroll-section">
     <div class="sticky-wrapper">
